@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+     <title>How Green - Kitchen</title>
+     <link rel="icon" href="images/tabIcon.png">
+     <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="images/Font/font-awesome-4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    <section class="headerKitchen">
+        <nav>
+            <a href="index.html"><img src="images/landingLogo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-window-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="kitchen.html">KITCHEN</a></li>
+                    <li><a href="bedroom.html">BEDROOM</a></li>
+                    <li><a href="livingRoom.html">LIVING ROOM</a></li>
+                    <li><a href="bathroom.html">BATHROOM</a></li>
+                    <li><a href="restOfTheHouse.html">OTHERS</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Kitchen</h1>
+
+    </section>
+
+
+    <section class="fridge">
+        <div class="row">
+            <div class="fridge-col">
+                <h1>Fridge</h1>
+                <p>Domestic fridge power consumption is typically between 100 and 250 watts. Over a full day, a fridge records between 1 to 2 kilowatt-hours (kWh) of total energy usage.</p>
+                <input type="text" placeholder="Quantity" id="fridgeQuantity">
+                <input type="text" placeholder="Runtime" id="fridgeRuntime">
+                <input type="text"  placeholder="Power" id="fridgePower">
+            </div>
+            <div class="fridge-col">
+                <img src="images/fridge.png">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="oven">
+        <div class="row">
+            <div class="oven-col">
+                <img src="images/oven.png">
+            </div>
+            <div class="oven-col">
+                <h1><br>Oven</h1>
+                <p>On average, the oven uses about 2000 watts or 2 Kilowatts per hour to run. The range may fall anywhere between 1000 watts to 3500 watts. </p>
+                <input type="text" placeholder="Quantity" id="ovenQuantity">
+                <input type="text" placeholder="Runtime" id="ovenRuntime">
+                <input type="text"  placeholder="Power" id="ovenPower">
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+
+        <div class="kitchenFact">
+            <h3>Did  you know?</h3>
+            <p>Our demand for energy grows by about 3% per year.</p>
+        </div>
+
+    </section>
+
+    <section class="stove">
+        <div class="row">
+            <div class="stove-col">
+                <h1>Stove</h1>
+                <p>The energy use of a stove top varies, smaller units will use 1000 watts while a larger heating element will go up to 3000 watts. A stove top may not use all the maximum rated power but will heat up until it reaches a set temperature, we estimate an average modern stove top element will use around 1500 watts per an hour of heating on medium to high.</p>
+                <input type="text" placeholder="Quantity" id="stoveQuantity">
+                <input type="text" placeholder="Runtime" id="stoveRuntime">
+                <input type="text" placeholder="Power" id="stovePower">
+            </div>
+            <div class="stove-col">
+                <img src="images/stove.png">
+            </div>
+        </div>
+    </section>
+
+    <section class="dishwasher">
+        <div class="row">
+            <div class="dishwasher-col">
+                <img src="images/dishwasher.png">
+            </div>
+            <div class="dishwasher-col">
+                <h1>Dishwasher.</h1>
+                <p>Dishwashers use a lot of electricity – 1 cycle is equivalent to how much electricity a TV uses after running for 20 hours straight.</p>
+                <input type="text" placeholder="Quantity" id="dishwasherQuantity">
+                <input type="text" placeholder="Runtime" id="dishwasherRuntime">
+                <input type="text"  placeholder="Power" id="dishwasherPower">
+                
+            </div>
+
+        </div>
+</section>
+
+
+    <section>
+        <div class="infoButton">
+            <button class="myButton" id="myButton" type="button" onclick="infoTextToggle()">Save info</button>
+            <p class="infoData" id="infoData" style="display: none">Data has been saved to the database ✔</p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="kitchenPick">
+            <h1>Top Picks</h1>
+            <p1>Recommended kitchen appliances based on energy efficiency and cost</p1>
+            <div class="row">
+                <div class="kitchenPick-col">
+                    <h3>Samsung RT58K7105SL</h3>
+                    <p>Energy Class: B</p>
+                    <img src="images/kitchenFridgePick.png">
+                </div>
+                <div class="kitchenPick-col">
+                    <h3>Gorenje GI5321XF</h3>
+                    <p>Energy Class: A++</p>
+                    <img src="images/kitchenOvenPick.png">
+                </div>
+                <div class="kitchenPick-col">
+                    <h3>AEG IKE74451FB</h3>
+                    <p>Energy Class: A</p>
+                    <img src="images/kitchenStovePick.png">
+                </div>
+                <div class="kitchenPick-col">
+                    <h3>Beko DFN26420X</h3>
+                    <p>Energy Class: A++</p>
+                    <img src="images/kitchenDishwasherPick.png">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <div class="kitchenBtn">
+        <a href="bedroom.html" class="kitchenButton">Next room</a>
+    </div>
+
+
+
+<script>
+
+
+
+const myButton = document.getElementById('myButton');
+myButton.addEventListener("click", function(e){
+    var fridgeQuantity = document.getElementById("fridgeQuantity").value;
+    if(!fridgeQuantity){
+        fridgeQuantity = 0;};
+
+    var fridgeRuntime = document.getElementById("fridgeRuntime").value;
+    if(!fridgeRuntime){
+        fridgeRuntime = 0;};
+
+    var fridgePower = document.getElementById("fridgePower").value;
+    if(!fridgePower){
+        fridgePower = 0;};
+
+
+    var ovenQuantity = document.getElementById("ovenQuantity").value;
+    if(!ovenQuantity){
+        ovenQuantity = 0;};
+
+    var ovenRuntime = document.getElementById("ovenRuntime").value;
+    if(!ovenRuntime){
+        ovenRuntime = 0;};
+
+    var ovenPower = document.getElementById("ovenPower").value;
+    if(!ovenPower){
+        ovenPower = 0;};
+
+
+    var stoveQuantity = document.getElementById("stoveQuantity").value;
+    if(!stoveQuantity){
+        stoveQuantity = 0;};
+
+    var stoveRuntime = document.getElementById("stoveRuntime").value;
+    if(!stoveRuntime){
+        stoveRuntime = 0;};
+
+    var stovePower = document.getElementById("stovePower").value;
+    if(!stovePower){
+        stovePower = 0;};
+
+
+    var dishwasherQuantity = document.getElementById("dishwasherQuantity").value;
+    if(!dishwasherQuantity){
+        dishwasherQuantity = 0;};
+
+    var dishwasherRuntime = document.getElementById("dishwasherRuntime").value;
+    if(!dishwasherRuntime){
+        dishwasherRuntime = 0;};
+
+    var dishwasherPower = document.getElementById("dishwasherPower").value;
+    if(!dishwasherPower){
+        dishwasherPower = 0;};
+
+
+
+
+
+
+
+(async function (params) {
+
+    const res = await fetch("http://localhost:5000/api/additem",{
+    method: "POST",
+    body: JSON.stringify(
+[      {
+        _id: "fridge",
+        title: "fridge",
+        quantity: fridgeQuantity,
+        runningTime: fridgeRuntime,
+        power: fridgePower,
+    },
+    {
+        _id: "oven",
+        title: "oven",
+        quantity: ovenQuantity,
+        runningTime: ovenRuntime,
+        power: ovenPower,
+      },
+      {
+        _id: "stove",
+        title: "stove",
+        quantity: stoveQuantity,
+        runningTime: stoveRuntime,
+        power: stovePower,
+      },
+      {
+        _id: "dishwasher",
+        title: "dishwasher",
+        quantity: dishwasherQuantity,
+        runningTime: dishwasherRuntime,
+        power: dishwasherPower,
+      },
+      
+    ]),
+    headers: {
+      'Content-Type': 'application/json'
+    },
+})
+
+
+
+    const data = await res.json();
+    console.log(data) 
+
+
+
+    const resa = await fetch("http://localhost:5000/api/getitems");
+        const dataa = await resa.json();
+        console.log(dataa,"data is fetch from database");
+    })();
+
+});
+
+
+
+
+function infoTextToggle() {
+    var text = document.getElementById("infoData");
+    if (text.style.display === "none") {
+        text.style.display = "block";
+    }
+}
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>

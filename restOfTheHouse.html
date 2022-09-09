@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+     <title>How Green - Others</title>
+     <link rel="icon" href="images/tabIcon.png">
+     <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="images/Font/font-awesome-4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    <section class="othersHeader">
+        <nav>
+            <a href="index.html"><img src="images/landingLogo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-window-close" onclick="hideNavigationMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="kitchen.html">KITCHEN</a></li>
+                    <li><a href="bedroom.html">BEDROOM</a></li>
+                    <li><a href="livingRoom.html">LIVING ROOM</a></li>
+                    <li><a href="bathroom.html">BATHROOM</a></li>
+                    <li><a href="restOfTheHouse.html">OTHERS</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showNavigationMenu()"></i>
+        </nav>
+        <h1>Rest of the house</h1>
+
+    </section>
+
+
+    <section class="fridge">
+        <div class="row">
+            <div class="fridge-col">
+                <h1><br>Lighting</h1>
+                <p>Lighting accounts for 15 percent of global electricity consumption and 5 percent of worldwide greenhouse gas emissions.</p>
+                <input type="text" placeholder="Quantity" id="lightingQuantity">
+                <input type="text" placeholder="Runtime" id="lightingRuntime">
+                <input type="text"  placeholder="Power" id="lightingPower">
+            </div>
+            <div class="fridge-col">
+                <img src="images/othersLighting.jpg">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="oven">
+        <div class="row">
+            <div class="oven-col">
+                <h1><br><br></h1>
+                <img src="images/othersHeating.jpg">
+            </div>
+            <div class="oven-col">
+                <h1><br><br>Heating</h1>
+                <p>Heat is the world's largest energy end use, accounting for almost half of global final energy consumption in 2021.</p>
+                <input type="text" placeholder="Quantity" id="heatingQuantity">
+                <input type="text" placeholder="Runtime" id="heatingRuntime">
+                <input type="text"  placeholder="Power" id="heatingPower">
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+
+        <div class="kitchenFact">
+            <h3>Did  you know?</h3>
+            <p>Heating and cooling account for about 56% of the energy use in a typical home. </p>
+        </div>
+
+    </section>
+
+
+    <section class="stove">
+        <div class="row">
+            <div class="stove-col">
+                <h1>Solar Panels</h1>
+                <p>Solar power is the fastest-growing energy source.</p>
+                <input type="text" placeholder="Quantity" id="solarQuantity">
+                <input type="text" placeholder="Runtime" id="solarRuntime">
+                <input type="text"  placeholder="Power" id="solarPower">
+            </div>
+            <div class="stove-col">
+                <br>
+                <img src="images/othersSolarPanel.jpg">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="dishwasher">
+        <div class="row">
+            <div class="dishwasher-col">
+                <br>
+                <img src="images/contract.jpg">
+            </div>
+            <div class="dishwasher-col">
+                <h1><br>Contract</h1>
+                <p>Please enter the current price per kWh of your energy contract</p>
+                <input type="text" placeholder="Price (per kWh)" id="contractPrice">            
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="extra">
+        <div class="extraTitle">
+            <h1>Extra Options</h1>
+        </div>
+        <div class="extra-row">
+            <div class="extra-col">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Quantity" id="extra1Quantity">
+                <input type="text" placeholder="Runtime" id="extra1Runtime">
+                <input type="text"  placeholder="Power" id="extra1Power">
+            </div>
+
+            <div class="extra-col">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Quantity" id="extra2Quantity">
+                <input type="text" placeholder="Runtime" id="extra2Runtime">
+                <input type="text"  placeholder="Power" id="extra2Power">
+            </div>
+
+            <div class="extra-col">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Quantity" id="extra3Quantity">
+                <input type="text" placeholder="Runtime" id="extra3Runtime">
+                <input type="text"  placeholder="Power" id="extra3Power">
+            </div>
+        </div>
+
+        <div class="extra-row">
+            <div class="extra-col">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Quantity" id="extra4Quantity">
+                <input type="text" placeholder="Runtime" id="extra4Runtime">
+                <input type="text"  placeholder="Power" id="extra4Power">
+            </div>
+
+            <div class="extra-col">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Quantity" id="extra5Quantity">
+                <input type="text" placeholder="Runtime" id="extra5Runtime">
+                <input type="text"  placeholder="Power" id="extra5Power">
+            </div>
+
+            <div class="extra-col">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Quantity" id="extra6Quantity">
+                <input type="text" placeholder="Runtime" id="extra6Runtime">
+                <input type="text"  placeholder="Power" id="extra6Power">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="infoButton">
+            <button class="myButton" id="myButton" type="button" onclick="infoTextToggle()">Save info</button>
+            <p class="infoData" id="infoData" style="display: none">Data has been saved to the database ✔</p>
+        </div>
+    </section>
+
+    <div class="kitchenBtn">
+        <a href="results.html" class="kitchenButton">Finish</a>
+    </div>
+
+
+
+
+<script>
+
+const myButton = document.getElementById('myButton');
+myButton.addEventListener("click", function(e){
+
+    var lightingQuantity = document.getElementById("lightingQuantity").value;
+    if(!lightingQuantity){
+        lightingQuantity = 0;};
+
+    var lightingRuntime = document.getElementById("lightingRuntime").value;
+    if(!lightingRuntime){
+        lightingRuntime = 0;};
+
+    var lightingPower = document.getElementById("lightingPower").value;
+    if(!lightingPower){
+        lightingPower = 0;};
+
+
+    var heatingQuantity = document.getElementById("heatingQuantity").value;
+    if(!heatingQuantity){
+        heatingQuantity = 0;};
+
+    var heatingRuntime = document.getElementById("heatingRuntime").value;
+    if(!heatingRuntime){
+        heatingRuntime = 0;};
+
+    var heatingPower = document.getElementById("heatingPower").value;
+    if(!heatingPower){
+        heatingPower = 0;};
+
+
+    var solarQuantity = document.getElementById("solarQuantity").value;
+    if(!solarQuantity){
+        solarQuantity = 0;};
+
+    var solarRuntime = document.getElementById("solarRuntime").value;
+    if(!solarRuntime){
+        solarRuntime = 0;};
+
+    var solarPower = document.getElementById("solarPower").value;
+    if(!solarPower){
+        solarPower = 0;};
+
+
+    var contractPrice = document.getElementById("contractPrice").value;
+    if(!contractPrice){
+        contractPrice = 0;};
+
+
+    var extra1Quantity = document.getElementById("extra1Quantity").value;
+    if(!extra1Quantity){
+        extra1Quantity = 0;};
+
+    var extra1Runtime = document.getElementById("extra1Runtime").value;
+    if(!extra1Runtime){
+        extra1Runtime = 0;};
+
+    var extra1Power = document.getElementById("extra1Power").value;
+    if(!extra1Power){
+        extra1Power = 0;};
+
+    var extra2Quantity = document.getElementById("extra2Quantity").value;
+    if(!extra2Quantity){
+        extra2Quantity = 0;};
+
+    var extra2Runtime = document.getElementById("extra2Runtime").value;
+    if(!extra2Runtime){
+        extra2Runtime = 0;};
+
+    var extra2Power = document.getElementById("extra2Power").value;
+    if(!extra2Power){
+        extra2Power = 0;};
+
+    var extra3Quantity = document.getElementById("extra1Quantity").value;
+    if(!extra3Quantity){
+        extra3Quantity = 0;};
+
+    var extra3Runtime = document.getElementById("extra3Runtime").value;
+    if(!extra3Runtime){
+        extra3Runtime = 0;};
+
+    var extra3Power = document.getElementById("extra3Power").value;
+    if(!extra3Power){
+        extra3Power = 0;};
+
+
+    var extra4Quantity = document.getElementById("extra4Quantity").value;
+    if(!extra4Quantity){
+        extra4Quantity = 0;};
+
+    var extra4Runtime = document.getElementById("extra4Runtime").value;
+    if(!extra4Runtime){
+        extra4Runtime = 0;};
+
+    var extra4Power = document.getElementById("extra4Power").value;
+    if(!extra4Power){
+        extra4Power = 0;};
+
+    var extra5Quantity = document.getElementById("extra5Quantity").value;
+    if(!extra5Quantity){
+        extra5Quantity = 0;};
+
+    var extra5Runtime = document.getElementById("extra5Runtime").value;
+    if(!extra5Runtime){
+        extra5Runtime = 0;};
+
+    var extra5Power = document.getElementById("extra5Power").value;
+    if(!extra5Power){
+        extra5Power = 0;};
+
+    var extra6Quantity = document.getElementById("extra5Quantity").value;
+    if(!extra6Quantity){
+        extra6Quantity = 0;};
+
+    var extra6Runtime = document.getElementById("extra5Runtime").value;
+    if(!extra6Runtime){
+        extra6Runtime = 0;};
+
+    var extra6Power = document.getElementById("extra6Power").value;
+    if(!extra6Power){
+        extra6Power = 0;};
+
+
+
+
+
+
+
+
+(async function (params) {
+
+    const resBedroom = await fetch("http://localhost:5000/api/additem",{
+    method: "POST",
+    body: JSON.stringify(
+[      {
+        _id: "lighting",
+        title: "lighting",
+        quantity: lightingQuantity,
+        runningTime: lightingRuntime,
+        power: lightingPower,
+    },
+    {
+        _id: "heating",
+        title: "heating",
+        quantity: heatingQuantity,
+        runningTime: heatingRuntime,
+        power: heatingPower,
+      },
+      {
+        _id: "solar",
+        title: "solar",
+        quantity: solarQuantity,
+        runningTime: solarRuntime,
+        power: solarPower,
+      },
+      {
+        _id: "contract",
+        title: "contract",
+        quantity: contractPrice,
+      },
+      {
+        _id: "extra1",
+        title: "extra1",
+        quantity: extra1Quantity,
+        runningTime: extra1Runtime,
+        power: extra1Power,
+      },
+      {
+        _id: "extra2",
+        title: "extra2",
+        quantity: extra2Quantity,
+        runningTime: extra2Runtime,
+        power: extra2Power,
+      },
+      {
+        _id: "extra3",
+        title: "extra3",
+        quantity: extra3Quantity,
+        runningTime: extra3Runtime,
+        power: extra3Power,
+      },
+      {
+        _id: "extra4",
+        title: "extra4",
+        quantity: extra4Quantity,
+        runningTime: extra4Runtime,
+        power: extra4Power,
+      },
+      {
+        _id: "extra5",
+        title: "extra5",
+        quantity: extra5Quantity,
+        runningTime: extra5Runtime,
+        power: extra5Power,
+      },
+      {
+        _id: "extra6",
+        title: "extra6",
+        quantity: extra6Quantity,
+        runningTime: extra6Runtime,
+        power: extra6Power,
+      },
+      
+    ]),
+    headers: {
+      'Content-Type': 'application/json'
+    },
+})
+
+
+
+const data = await resBedroom.json();
+console.log(data) 
+
+
+
+const resBedroom2 = await fetch("http://localhost:5000/api/getitems");
+     const dataaa = await resBedroom2.json();
+     console.log(dataaa,"data is fetch from database");
+})();
+
+});
+
+
+function infoTextToggle() {
+    var text = document.getElementById("infoData");
+    if (text.style.display === "none") {
+        text.style.display = "block";
+    }
+}
+
+var navigationTabs = document.getElementById("navLinks");
+
+function hideNavigationMenu(){
+    navigationTabs.style.right = "-200px";
+}
+
+function showNavigationMenu(){
+    navigationTabs.style.right = "0";
+}
+
+
+</script>
+
+</body>
+</html>

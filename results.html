@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+     <title>How Green - Results</title>
+     <link rel="icon" href="images/tabIcon.png">
+     <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="images/Font/font-awesome-4.7.0/css/font-awesome.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+</head>
+
+<body>
+    <section class="resultsHeader">
+        <nav>
+            <a href="index.html"><img src="images/landingLogo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-window-close" onclick="hideNavigationMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="kitchen.html">KITCHEN</a></li>
+                    <li><a href="bedroom.html">BEDROOM</a></li>
+                    <li><a href="livingRoom.html">LIVING ROOM</a></li>
+                    <li><a href="bathroom.html">BATHROOM</a></li>
+                    <li><a href="restOfTheHouse.html">OTHERS</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showNavigationMenu()"></i>
+        </nav>
+        <h1>Results</h1>
+
+    </section>
+
+
+    <section class="roomRatings">
+        <h1 id="h1Title"><br><br>Per month<br><br><br></h1>
+        <h1 id="h1Kitchen">Your Kitchen energy usage is: <br></h1>
+        <h1 id="h1Bedroom">Your Bedroom energy usage is: <br></h1>
+        <h1 id="h1Living">Your Living Room energy usage is: <br></h1>
+        <h1 id="h1Bathroom">Your Bathroom energy usage is: <br></h1>
+        <h1 id="h1Others">Your Rest of the house energy usage is: </h1><br><br>
+        <h1 id="h1romania">Your household energy consumption: </h1>
+        <h1 id="h1unitedStates">Your Rest of the house energy usage is: </h1>
+        <div class="piechart" id="piechart" align="center">
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+        </div>
+    </section>
+
+
+    <section class="results">
+        <h1 id="h1dailyEnergyConsumption">Your daily energy consumption is: <br></h1>
+        <h1 id="h1monthlyEnergyConsumption">Your monthly energy consumption is: <br></h1>
+        <h1 id="h1yearlyEnergyConsumption">Your yearly energy consumption is: <br></h1>
+        <h1 id="h1contractPrice">Based on the current energy price your monthly bill is: <br></h1>
+        <h1 id="h1solarPanel">Your solar panels save you over .</h1>
+        <div class="myChart" align="center">
+            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+        </div>
+    </section>
+
+    <section class="percentages">
+        <h1 id="h1solarPanelSavings">Your solar panels save you <br></h1>
+        <h1 id="h1cheaperContract"><br></h1>
+        <h1 id="h1lightingPercentage"> of your energy bill comes from heating.<br></h1>
+        <h1 id="h1heatingPercentage"> of your energy bill comes from heating.<br><br><br></h1>
+        <div class="myChart2" align="center">
+            <canvas id="myChart2" style="width:100%;max-width:600px"></canvas>
+    </section>
+
+    <section class="appliances">
+        <h1 id="h1fridge"> </h1>
+        <h1 id="h1oven"></h1>
+        <h1 id="h1dishwasher"> </h1>
+        <h1 id="h1fridgeYear"> </h1>
+        <div class="myChart3" align="center">
+            <canvas id="myChart3" style="width:100%;max-width:600px"></canvas>
+    </section>
+
+    <section class="bathroom">
+        <h1 id="h1washing"> </h1>
+        <h1 id="h1dryer"></h1>
+        <h1 id="h1hairDryer"> </h1>
+    </section>
+
+
+
+<script>
+
+(async function (params) {
+
+const resBedroom2 = await fetch("http://localhost:5000/api/getitems");
+ const dbData = await resBedroom2.json();
+ console.log(dbData,"data is fetch from database");
+
+
+
+    var fridgeQuantity = dbData[0].quantity;
+    var fridgeRuntime = dbData[0].runningTime;
+    var fridgePower = dbData[0].power;
+    var ovenQuantity = dbData[2].quantity;
+    var ovenRuntime = dbData[2].runningTime;
+    var ovenPower = dbData[2].power;
+    var stoveQuantity = dbData[3].quantity;
+    var stoveRuntime = dbData[3].runningTime;
+    var stovePower = dbData[3].power;
+    var dishwasherQuantity = dbData[1].quantity;
+    var dishwasherRuntime = dbData[1].runningTime;
+    var dishwasherPower = dbData[1].power;
+
+
+    var televisionQuantity = dbData[4].quantity;
+    var televisionRuntime = dbData[4].runningTime;
+    var televisionPower = dbData[4].power;
+    var acQuantity = dbData[6].quantity;
+    var acRuntime = dbData[6].runningTime;
+    var acPower = dbData[6].power;
+    var lampQuantity = dbData[5].quantity;
+    var lampRuntime = dbData[5].runningTime;
+    var lampPower = dbData[5].power;
+    var pcQuantity = dbData[7].quantity;
+    var pcRuntime = dbData[7].runningTime;
+    var pcPower = dbData[7].power;
+
+    var tvQuantity = dbData[9].quantity;
+    var tvRuntime = dbData[9].runningTime;
+    var tvPower = dbData[9].power;
+    var laptopQuantity = dbData[8].quantity;
+    var laptopRuntime = dbData[8].runningTime;
+    var laptopPower = dbData[8].power;
+    var lmpQuantity = dbData[10].quantity;
+    var lmpRuntime = dbData[10].runningTime;
+    var lmpPower = dbData[10].power;
+    var mediaQuantity = dbData[11].quantity;
+    var mediaRuntime = dbData[11].runningTime;
+    var mediaPower = dbData[11].power;
+
+    var washingQuantity = dbData[12].quantity;
+    var washingRuntime = dbData[12].runningTime;
+    var washingPower = dbData[12].power;
+    var clothesDryerQuantity = dbData[13].quantity;
+    var clothesDryerRuntime = dbData[13].runningTime;
+    var clothesDryerPower = dbData[13].power;
+    var hairDryerQuantity = dbData[14].quantity;
+    var hairDryerRuntime = dbData[14].runningTime;
+    var hairDryerPower = dbData[14].power;
+    var showerQuantity = dbData[15].quantity;
+    var showerRuntime = dbData[16].runningTime;
+    var showerPower = dbData[16].power;
+
+    var lightingQuantity = dbData[18].quantity;
+    var lightingRuntime = dbData[18].runningTime;
+    var lightingPower = dbData[18].power;
+    var heatingQuantity = dbData[19].quantity;
+    var heatingRuntime = dbData[19].runningTime;
+    var heatingPower = dbData[19].power;
+    var solarQuantity = dbData[16].quantity;
+    var solarRuntime = dbData[16].runningTime;
+    var solarPower = dbData[16].power;
+    var contractQuantity = dbData[23].quantity;
+
+    var extra1Quantity = dbData[22].quantity;
+    var extra1Runtime = dbData[22].runningTime;
+    var extra1Power = dbData[22].power;
+    var extra2Quantity = dbData[26].quantity;
+    var extra2Runtime = dbData[26].runningTime;
+    var extra2Power = dbData[26].power;
+    var extra3Quantity = dbData[25].quantity;
+    var extra3Runtime = dbData[25].runningTime;
+    var extra3Power = dbData[25].power;
+    var extra4Quantity = dbData[21].quantity;
+    var extra4Runtime = dbData[21].runningTime;
+    var extra4Power = dbData[21].power;
+    var extra5Quantity = dbData[20].quantity;
+    var extra5Runtime = dbData[20].runningTime;
+    var extra5Power = dbData[20].power;
+    var extra6Quantity = dbData[24].quantity;
+    var extra6Runtime = dbData[24].runningTime;
+    var extra6Power = dbData[24].power;
+
+
+
+
+
+    var  kitchenConsumption = (fridgeQuantity * (fridgeRuntime * fridgePower)                   +
+                               ovenQuantity * (ovenRuntime * ovenPower)                         +
+                               stoveQuantity * (stoveRuntime * stovePower)                      +
+                               dishwasherQuantity * (dishwasherRuntime * dishwasherPower));
+
+    var  bedroomConsumption = (televisionQuantity * (televisionRuntime * televisionPower)       +
+                               acQuantity * (acRuntime * acPower)                               +
+                               lampQuantity * (lampRuntime * lampPower)                         +
+                               pcQuantity * (pcRuntime * pcPower));
+
+    var  livingConsumption = (tvQuantity * (tvRuntime * tvPower)                                +
+                               laptopQuantity * (laptopRuntime * laptopPower)                   +
+                               lmpQuantity * (lmpRuntime * lmpPower)                            +
+                               mediaQuantity * (mediaRuntime * mediaPower));
+
+    var  bathroomConsumption = (washingQuantity * (washingRuntime * washingPower)               +
+                               clothesDryerQuantity * (clothesDryerRuntime * clothesDryerPower) +
+                               hairDryerQuantity * (hairDryerRuntime * hairDryerPower)          +
+                               showerQuantity * (showerRuntime *showerPower));               
+                               
+    var  othersConsumption = (lightingQuantity * (lightingRuntime * lightingPower)              +
+                               heatingQuantity * (heatingRuntime * heatingPower)                +    
+                               extra1Quantity * (extra1Runtime * extra1Power)                   +
+                               extra2Quantity * (extra2Runtime * extra2Power)                   +
+                               extra3Quantity * (extra3Runtime * extra3Power)                   +
+                               extra4Quantity * (extra4Runtime * extra4Power)                   +
+                               extra5Quantity * (extra5Runtime * extra5Power)                   +
+                               extra6Quantity * (extra6Runtime * extra6Power));                  
+
+    var  solarConsumption = (solarQuantity * (solarRuntime * solarPower));
+
+
+    console.log('Kitchen consumption:  ', kitchenConsumption);
+    console.log('Bedroom consumption:  ', bedroomConsumption);
+    console.log('Living consumption:   ', livingConsumption);
+    console.log('Bathroom consumption: ', bathroomConsumption);
+    console.log('Others consumption:   ', othersConsumption);
+    
+    document.getElementById("h1Kitchen").innerHTML = 'Your kitchen energy consumption is ' + (parseFloat(kitchenConsumption * 30).toFixed(2)) + " kWh";
+    document.getElementById("h1Bedroom").innerHTML = 'Your bedroom energy consumption is ' + (parseFloat(bedroomConsumption * 30).toFixed(2)) + " kWh";
+    document.getElementById("h1Living").innerHTML = 'Your living room energy consumption is ' + (parseFloat(livingConsumption * 30).toFixed(2)) + " kWh";
+    document.getElementById("h1Bathroom").innerHTML = 'Your bathroom energy consumption is ' + (parseFloat(bathroomConsumption * 30).toFixed(2)) + " kWh";
+    document.getElementById("h1Others").innerHTML = 'Your rest of the house energy consumption is ' + (parseFloat(othersConsumption * 30).toFixed(2)) + " kWh";
+    
+
+
+
+
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+        ['Room', 'Energy Usage'],
+        ['Kitchen', kitchenConsumption],
+        ['Bedroom', bedroomConsumption],
+        ['Living Room', livingConsumption],
+        ['Bathroom', bathroomConsumption],
+        ['Rest of the house', othersConsumption]
+])
+
+  var chartInfo = {'title':'House energy consumption', 'width':850, 'height':600};
+  var pieChart = new google.visualization.PieChart(document.getElementById('piechart'));
+  pieChart.draw(data, chartInfo);
+
+
+
+    dailyEnergyConsumption = kitchenConsumption + bedroomConsumption + livingConsumption + bathroomConsumption + othersConsumption;
+    monthlyEnergyConsumption = (kitchenConsumption + bedroomConsumption + livingConsumption + bathroomConsumption + othersConsumption) * 30;
+    yearlyEnergyConsumption = (kitchenConsumption + bedroomConsumption + livingConsumption + bathroomConsumption + othersConsumption) * 365;
+
+    solarPanelConsumption = solarConsumption;
+    energyConsumptionSolar = monthlyEnergyConsumption - solarPanelConsumption;
+    contractPrice = monthlyEnergyConsumption * contractQuantity;
+
+    document.getElementById("h1dailyEnergyConsumption").innerHTML = 'Your daily energy consumption is ' + (parseFloat(dailyEnergyConsumption).toFixed(2)) + " kWh";
+    document.getElementById("h1monthlyEnergyConsumption").innerHTML = 'Your monthly energy consumption is ' + (parseFloat(monthlyEnergyConsumption).toFixed(2)) + " kWh";
+    document.getElementById("h1yearlyEnergyConsumption").innerHTML = 'Your yearly energy consumption is ' + (parseFloat(yearlyEnergyConsumption).toFixed(2)) + " kWh";
+    document.getElementById("h1contractPrice").innerHTML = 'Based on your current contract your monthly energy bill should be ' + parseFloat(contractPrice).toFixed(2) + " RON";
+    document.getElementById("h1solarPanel").innerHTML = 'Your solar panels produce ' + (parseFloat(solarPanelConsumption * 30).toFixed(2)) + " kWh in a month. Potentially saving you " + parseFloat(solarPanelConsumption * 365 * contractQuantity) + ' RON over the year.';
+    if(yearlyEnergyConsumption > 2802)
+        document.getElementById("h1romania").innerHTML = 'Your total energy consumption is  ' + (parseFloat(100 - percentage(2802, yearlyEnergyConsumption)).toFixed(2)) + "% higher than the average value in Romania.";
+        if(yearlyEnergyConsumption < 12154)
+        document.getElementById("h1unitedStates").innerHTML = 'Your total energy consumption is  ' + (parseFloat(100 - percentage(yearlyEnergyConsumption, 12154)).toFixed(2)) + "% smaller than the average value in USA.";
+    
+    var averageHouseholdConsumption = ["United States", "Germany", "United Kingdom", "Romania", "Your House", "India", "Japan"];
+    var averageNumbers = [12154, 6306, 4496, 2842, yearlyEnergyConsumption, 1208, 7150];
+    var barColors = ["orange", "orange","orange","blue","purple", "orange", "orange"];
+
+    new Chart("myChart", {
+    type: "bar",
+    data: {
+        labels: averageHouseholdConsumption,
+        datasets: [{
+            backgroundColor: barColors,
+            data: averageNumbers
+        }]
+    },
+    options: {
+        legend: {display: false},
+        title: {
+            display: true,
+            text: "Household average consumption (kWh)"
+        }
+    }
+});
+
+    function percentage(p, t) {
+        var result = (100 * p) / t;;
+        result = parseFloat(result).toFixed(2);
+        return result;
+    } 
+
+
+
+
+    document.getElementById("h1solarPanelSavings").innerHTML = 'Your solar panels reduce your consumption by ' + percentage(solarPanelConsumption * 30, monthlyEnergyConsumption) + "%.";
+    if(contractQuantity > 0.80){
+    document.getElementById("h1cheaperContract").innerHTML = 'Your electricity bill can be ' + (100 - percentage(0.39, contractQuantity)).toFixed(2) + '% cheaper if you switch to the current Hidroelectrica offer.';}
+    document.getElementById("h1lightingPercentage").innerHTML = percentage(lightingQuantity * (lightingRuntime * lightingPower), dailyEnergyConsumption) + "% of your energy consumption comes from lighting.";
+    document.getElementById("h1heatingPercentage").innerHTML = percentage(heatingQuantity * (heatingRuntime * heatingPower), dailyEnergyConsumption) + "% of your energy consumption comes from heating.";
+
+
+
+    var kitchenAppliances = ["Fridge A Class", "Your Fridge", "Oven A+ Class", "Your Oven", "Dishwasher A Class", "Your Dishwasher"];
+    var kitchenNumbers = [0.012 * 10, fridgePower * 10, 1.08, ovenPower, 0.526, dishwasherPower];
+    var barColors = ["orange", "orange","red","red","blue", "blue"];
+
+    new Chart("myChart2", {
+    type: "bar",
+    data: {
+        labels: kitchenAppliances,
+        datasets: [{
+            backgroundColor: barColors,
+            data: kitchenNumbers
+        }]
+    },
+    options: {
+        legend: {display: false},
+        title: {
+            display: true,
+            text: "Kitchen Appliances energy consumption"
+        }
+    }
+});
+
+
+    if(fridgePower >  0.012)
+        document.getElementById("h1fridge").innerHTML = 'A more efficient fridge (Energy Class: A) would use ' + (100 - percentage(0.012, fridgePower)) + '% less energy than your current model.';
+    if(ovenPower >  1.08)
+        document.getElementById("h1oven").innerHTML = 'On average, ovens use between 1 kWh to 3.5 kWh in order to run. A more efficient model (Class Energy: A+) would use ' + (100 - percentage(1.08, ovenPower)) + '% less energy than your current oven.';
+    if(dishwasherPower >  0.526)
+        document.getElementById("h1dishwasher").innerHTML = 'A more efficient dishwasher would use ' + (100 - percentage(0.526, dishwasherPower)) + '% less energy compared to your current model.';
+    document.getElementById("h1fridgeYear").innerHTML = 'Over a period of a year, the cost to run your current fridge is ' + (fridgePower*8760*contractQuantity) + 'RON.';
+
+
+    var bathroomAppliances = ["Washing Machine A+++ Class", "Your Washing Machine", "Clothes Dryer A+++ Class", "Your Dryer", "Efficient Hair Dryer", "Your Hair Dryer"];
+    var bathroomNumbers = [0.62, washingPower, 1.50, clothesDryerPower, 1.450, hairDryerPower];
+    var barColors = ["orange", "orange","red","red","blue", "blue"];
+
+    new Chart("myChart3", {
+    type: "bar",
+    data: {
+        labels: bathroomAppliances,
+        datasets: [{
+            backgroundColor: barColors,
+            data: bathroomNumbers
+        }]
+    },
+    options: {
+        legend: {display: false},
+        title: {
+            display: true,
+            text: "Bathroom Appliances energy consumption"
+        }
+    }
+});
+
+    if(washingPower >  0.62)
+        document.getElementById("h1washing").innerHTML = 'A more efficient washing machine (Energy Class: A+++) would use ' + parseFloat(100 - percentage(0.62, washingPower)).toFixed(2) + '% less energy than your current model.';
+    if(clothesDryerPower >  1.50)
+        document.getElementById("h1dryer").innerHTML = 'A more efficient clothes dryer (Class Energy: A+) would use ' + parseFloat(100 - percentage(1.50, clothesDryerPower)).toFixed(2) + '% less energy than your current dryer.';
+    if(hairDryerPower >  1.450)
+        document.getElementById("h1hairDryer").innerHTML = 'A more efficient hair dryer would use ' + parseFloat(100 - percentage(1.450, hairDryerPower)).toFixed(2) + '% less energy compared to your current model.';
+    document.getElementById("h1fridgeYear").innerHTML = 'Over a period of a year, the cost to run your current fridge is ' + (fridgePower*8760*contractQuantity) + 'RON.';
+
+
+}
+
+})();
+
+
+
+
+    var navigationTabs = document.getElementById("navLinks");
+
+    function hideNavigationMenu(){
+        navigationTabs.style.right = "-200px";
+    }
+
+    function showNavigationMenu(){
+        navigationTabs.style.right = "0";
+    }
+
+
+    
+</script>
+
+</body>
+</html>

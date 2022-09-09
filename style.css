@@ -1,0 +1,889 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(4,9,30,0.65),rgba(4,9,30,0.65)),url(images/landingBanner.jpg);
+}
+
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 150px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: yellowgreen;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: white;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    border: 1px solid yellowgreen;
+    background: yellowgreen;
+    transition: 1s;
+}
+
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 700px){
+    html, body {overflow-x: hidden;}
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links{
+        position: absolute;
+        background: yellowgreen;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22;
+        cursor: pointer;
+    }
+
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+
+/* green uses */
+
+.green{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.green-col{
+    flex-basis: 31%;
+    background: rgb(227, 252, 177);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.green-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+/* price */
+
+.price{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 50px;
+}
+
+.price-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.price-col img{
+    width: 100%;
+    height: 80%;
+    display: block;
+}
+
+.layer{
+    background: transparent;
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background: rgba(154, 205, 50, 0.9);
+}
+
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3{
+    bottom: 37%;
+    opacity: 1;
+}
+
+
+/* history */
+
+.history{
+    width: 71.5%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+
+
+.history-col img{
+    padding: 5px;
+    width: auto;
+
+}
+
+
+
+/* Quotes */
+
+.quotes{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+
+.quotes-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 1%;
+    text-align: left;
+    background: yellowgreen;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+}
+
+.quotes-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.quotes-col p{
+    padding: 0;
+    color: black;
+
+}
+
+.quotes-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+@media(max-width: 700px){
+    .quotes-col img{
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+
+    .history-col img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .history{
+        width: 91.5%;
+        margin: auto;
+        text-align: center;
+    }
+    
+    
+
+    .layer{
+        background: transparent;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+    }
+
+    .layer h3{
+        width: 100%;
+        font-weight: 500;
+        color: white;
+        font-size: 16px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    
+}
+
+
+/* end */
+
+.end{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/endBanner.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.end h1{
+    color: white;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+@media(max-width: 700px){
+    .end h1{
+        font-size: 24px;
+    }
+}
+
+
+
+
+
+
+/* KITCHEN */
+
+.headerKitchen{
+    height: 70vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/kitchen.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.headerKitchen h1{
+    margin-top: 100px;
+}
+
+.fridge{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.fridge-col{
+    flex-basis: 42%;
+    padding: 30px 2px;
+    text-align:center
+}
+
+.fridge-col img{
+    width: 100%;
+}
+
+.fridge-col h1{
+    padding-top: 0;
+}
+
+.fridge-col p{
+    padding: 15px 0 25px;
+}
+
+.fridge-col input{
+    padding-top: 2px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.fridge-col button{
+    padding-top: 2px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+
+
+.oven{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.oven-col{
+    flex-basis: 42%;
+    padding: 30px 2px;
+}
+
+.oven-col img{
+    width: 100%;
+}
+
+.oven-col h1{
+    padding-top: 0;
+}
+
+.oven-col p{
+    padding: 15px 0 25px;
+}
+
+.oven-col input{
+    padding-top: 2px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+
+.stove{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.stove-col{
+    flex-basis: 42%;
+    padding: 30px 2px;
+}
+
+.stove-col img{
+    width: 100%;
+}
+
+.stove-col h1{
+    padding-top: 0;
+}
+
+.stove-col p{
+    padding: 15px 0 25px;
+}
+
+.stove-col input{
+    padding-top: 2px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+
+.dishwasher{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.dishwasher-col{
+    flex-basis: 42%;
+    padding: 30px 2px;
+}
+
+.dishwasher-col img{
+    width: 100%;
+}
+
+.dishwasher-col h1{
+    padding-top: 0;
+}
+
+.dishwasher-col p{
+    padding: 15px 0 25px;
+}
+
+.dishwasher-col input{
+    padding-top: 2px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+
+
+.kitchenFact{
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 70px;
+}
+
+
+
+
+.kitchenPick{
+    text-align: center;
+    margin-top: 100px;
+
+}
+
+.kitchenPick-col p{
+    font-size: 8px;
+
+}
+
+
+.kitchenPick-col img{
+    position:relative;
+    margin: 0 10vh 0 10vh;
+    width:  150px;
+    height: 350px;
+    object-fit:contain;
+
+}
+
+@media(max-width: 700px){
+    .kitchenPick{
+        text-align: center;
+        margin-top: 50px;
+    
+    }
+    
+    .kitchenPick-col p{
+        font-size: 8px;
+    }
+    
+    
+    .kitchenPick-col img{
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+}
+
+
+.kitchenBtn{
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 90px;
+}
+.kitchenButton{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    padding: 16px 62px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.kitchenButton:hover{
+    border: 2px solid yellowgreen;
+    background: yellowgreen;
+    transition: 1s;
+}
+
+
+
+
+
+
+
+
+/* BEDROOM */
+
+
+
+
+.headerBedroom{
+    height: 70vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/bedroom.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.headerBedroom h1{
+    margin-top: 100px;
+
+}
+
+
+
+/* LIVING ROOM */
+
+
+.livingHeader{
+    height: 70vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/livingRoom.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.livingHeader h1{
+    margin-top: 100px;
+
+}
+
+
+
+/* BATHROOM */
+
+.bathroomHeader{
+    height: 70vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/bathroom.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.bathroomHeader h1{
+    margin-top: 100px;
+
+}
+
+
+
+
+/* Rest of the house */ 
+
+.othersHeader{
+    height: 70vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/Others.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.othersHeader h1{
+    margin-top: 100px;
+
+}
+
+
+.extra{
+    margin-top: 150px;
+}
+
+
+.extraTitle{
+    text-align: center;
+}
+
+.extraTitle h1{
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 40px;
+}
+
+.extra-col{
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.extra-col input{
+    text-align: center;
+}
+
+
+
+/* SAVE INFO BUTTON */
+
+
+.myButton {
+    padding: 15px 45px;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    background-color: yellowgreen;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    border: none;
+    outline: none;
+    font-size: 24px;
+  }
+  
+.myButton:hover {background-color: yellowgreen;}
+  
+.myButton:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    background-color: yellowgreen;
+  }
+
+.infoButton{
+    text-align: center;
+    margin-bottom: 225px;
+    margin-top: 75px;
+}
+
+.infoData{
+    color: forestgreen;
+    font-weight: 200;
+    margin-top: 30px;
+
+    
+}
+
+
+/* Results */
+
+
+.resultsHeader{
+    height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/results.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.resultsHeader h1{
+    margin-top: 100px;
+}
+
+.roomRatings{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.results{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.percentages{
+    margin-top: 100px;
+    text-align: center;
+}
+
+
+.infoGraph {
+    text-align: center;
+    margin-top: 90px;
+}
+
+
+.myChart{
+    margin-top: 100px;
+}
+
+.myChart2{
+    margin-top: 100px;
+}
+
+.myChart3{
+    margin-top: 100px;
+}
+
+.appliances{
+    margin-top: 200px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.appliances h1{
+    margin-top: 10px;
+    font-size: 32px;
+}
+
+
+.bathroom {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 150px;
+}
+.bathroom h1{
+    margin-top: 10px;
+    font-size: 32px;
+}
+
+
+
+@media(max-width: 700px){
+    .roomRatings h1{
+        margin-top: 100px;
+        text-align: center;
+        font-size: 18px;
+    }
+    
+    .results h1{
+        margin-top: 100px;
+        text-align: center;
+        font-size: 18px;
+    }
+    .piechart{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        scale: 60%;
+        margin-left: 90px;
+    }
+    
+    
+    .myChart{
+        margin-top: 100px;
+        scale: 90%;
+    }
+
+    .myChart2{
+        margin-top: 100px;
+        scale: 90%;
+    }
+
+    .myChart3{
+        margin-top: 100px;
+        scale: 90%;
+    }
+
+    .percentages h1{
+        margin-top: 100px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .appliances h1{
+        font-size: 18px;
+    }
+
+    .bathroom h1{
+        font-size: 18px;
+    }
+    
+}

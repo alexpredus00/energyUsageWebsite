@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+     <title>How Green - Bathroom</title>
+     <link rel="icon" href="images/tabIcon.png">
+     <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="images/Font/font-awesome-4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    <section class="bathroomHeader">
+        <nav>
+            <a href="index.html"><img src="images/landingLogo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-window-close" onclick="hideNavigationMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="kitchen.html">KITCHEN</a></li>
+                    <li><a href="bedroom.html">BEDROOM</a></li>
+                    <li><a href="livingRoom.html">LIVING ROOM</a></li>
+                    <li><a href="bathroom.html">BATHROOM</a></li>
+                    <li><a href="restOfTheHouse.html">OTHERS</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showNavigationMenu()"></i>
+        </nav>
+        <h1>Bathroom</h1>
+
+    </section>
+
+
+    <section class="fridge">
+        <div class="row">
+            <div class="fridge-col">
+                <h1><br>Washing Machine</h1>
+                <p>The average washing machine is 300 watts per hour, which is equal to 0.3 kWh.</p>
+                <input type="text" placeholder="Quantity" id="washingQuantity">
+                <input type="text" placeholder="Runtime" id="washingRuntime">
+                <input type="text"  placeholder="Power" id="washingPower">
+            </div>
+            <div class="fridge-col">
+                <img src="images/bathWashing.jpg">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="oven">
+        <div class="row">
+            <div class="oven-col">
+                <h1><br><br></h1>
+                <img src="images/bathDryer.jpg">
+            </div>
+            <div class="oven-col">
+                <h1><br><br>Clothes Dryer</h1>
+                <p>Electric clothes dryers use anywhere from 1800 to 5000 watts of energy, on average, dependent on the load and cycle configurations.</p>
+                <input type="text" placeholder="Quantity" id="clothesDryerQuantity">
+                <input type="text" placeholder="Runtime" id="clothesDryerRuntime">
+                <input type="text"  placeholder="Power" id="clothesDryerPower">
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+
+        <div class="kitchenFact">
+            <h3>Did  you know?</h3>
+            <p>10 Google searches can power a 60-watt lightbulb </p>
+        </div>
+
+    </section>
+
+    <section class="stove">
+        <div class="row">
+            <div class="stove-col">
+                <br><br><br><br><br><br>
+                <h1>Hair Dryer</h1>
+                <p>The most common hair dryer wattage is 1875W. Hair dryers typically use 1,875 watts (1.875 kWh) on the highest setting, 975 watts (. 975 kWh) on the medium setting and 862.5 watts (. 8625 kWh) on the lowest setting.</p>
+                <input type="text" placeholder="Quantity" id="hairDryerQuantity">
+                <input type="text" placeholder="Runtime" id="hairDryerRuntime">
+                <input type="text"  placeholder="Power" id="hairDryerPower">
+            </div>
+            <div class="stove-col">
+                <br>
+                <img src="images/bathHairDryer.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section class="dishwasher">
+        <div class="row">
+            <div class="dishwasher-col">
+                <br>
+                <img src="images/bathroomShower.jpg">
+            </div>
+            <div class="dishwasher-col">
+                <h1><br><br><br><br>Shower</h1>
+                <p> Electric showers are sized in kilowatts (kW). Generally, a smaller property will have a 7.5 to 8.5 kW shower, whereas bigger homes can have up to a 10.5 kW appliance.</p>
+                <input type="text" placeholder="Quantity" id="showerQuantity">
+                <input type="text" placeholder="Runtime" id="showerRuntime">
+                <input type="text"  placeholder="Power" id="showerPower">
+                
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="infoButton">
+            <button class="myButton" id="myButton" type="button" onclick="infoTextToggle()">Save info</button>
+            <p class="infoData" id="infoData" style="display: none">Data has been saved to the database ✔</p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="kitchenPick">
+            <h1>Top Picks</h1>
+            <p1>Recommended bathroom appliances based on energy efficiency and cost</p1>
+            <div class="row">
+                <div class="kitchenPick-col">
+                    <h3>Samsung WW70TA046AX/LE</h3>
+                    <p>Energy Class: A+++</p>
+                    <img src="images/bathWashingPick.png">
+                </div>
+                <div class="kitchenPick-col">
+                    <h3>Beko B5T68243</h3>
+                    <p>Energy Class: A+++</p>
+                    <img src="images/bathDryerPick.png">
+                </div>
+                <div class="kitchenPick-col">
+                    <h3>Remington AC9140</h3>
+                    <p>Power: 2400W</p>
+                    <img src="images/bathHairDryerPick.jpg">
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <div class="kitchenBtn">
+        <a href="restOfTheHouse.html" class="kitchenButton">Next room</a>
+    </div>
+
+
+<script>
+
+const myButton = document.getElementById('myButton');
+myButton.addEventListener("click", function(e){
+
+    var washingQuantity = document.getElementById("washingQuantity").value;
+    if(!washingQuantity){
+        washingQuantity = 0;};
+
+    var washingRuntime = document.getElementById("washingRuntime").value;
+    if(!washingRuntime){
+        washingRuntime = 0;};
+
+    var washingPower = document.getElementById("washingPower").value;
+    if(!washingPower){
+        washingPower = 0;};
+
+
+    var clothesDryerQuantity = document.getElementById("clothesDryerQuantity").value;
+    if(!clothesDryerQuantity){
+        clothesDryerQuantity = 0;};
+
+    var clothesDryerRuntime = document.getElementById("clothesDryerRuntime").value;
+    if(!clothesDryerRuntime){
+        clothesDryerRuntime = 0;};
+
+    var clothesDryerPower = document.getElementById("clothesDryerPower").value;
+    if(!clothesDryerPower){
+        clothesDryerPower = 0;};
+
+
+    var hairDryerQuantity = document.getElementById("hairDryerQuantity").value;
+    if(!hairDryerQuantity){
+        hairDryerQuantity = 0;};
+
+    var hairDryerRuntime = document.getElementById("hairDryerRuntime").value;
+    if(!hairDryerRuntime){
+        hairDryerRuntime = 0;};
+
+    var hairDryerPower = document.getElementById("hairDryerPower").value;
+    if(!hairDryerPower){
+        hairDryerPower = 0;};
+
+
+    var showerQuantity = document.getElementById("showerQuantity").value;
+    if(!showerQuantity){
+        showerQuantity = 0;};
+
+    var showerRuntime = document.getElementById("showerRuntime").value;
+    if(!showerRuntime){
+        showerRuntime = 0;};
+
+    var showerPower = document.getElementById("showerPower").value;
+    if(!showerPower){
+        showerPower = 0;};
+
+
+
+
+
+
+
+(async function (params) {
+
+    const resBedroom = await fetch("http://localhost:5000/api/additem",{
+    method: "POST",
+    body: JSON.stringify(
+[      {
+        _id: "washing",
+        title: "washing",
+        quantity: washingQuantity,
+        runningTime: washingRuntime,
+        power: washingPower,
+    },
+    {
+        _id: "clothesDryer",
+        title: "clothesDryer",
+        quantity: clothesDryerQuantity,
+        runningTime: clothesDryerRuntime,
+        power: clothesDryerPower,
+      },
+      {
+        _id: "hairDryer",
+        title: "hairDryer",
+        quantity: hairDryerQuantity,
+        runningTime: hairDryerRuntime,
+        power: hairDryerPower,
+      },
+      {
+        _id: "shower",
+        title: "shower",
+        quantity: showerQuantity,
+        runningTime: showerRuntime,
+        power: showerPower,
+      },
+      
+    ]),
+    headers: {
+      'Content-Type': 'application/json'
+    },
+})
+
+
+
+const data = await resBedroom.json();
+console.log(data) 
+
+
+
+const resBedroom2 = await fetch("http://localhost:5000/api/getitems");
+     const dataaa = await resBedroom2.json();
+     console.log(dataaa,"data is fetch from database");
+})();
+
+});
+
+
+function infoTextToggle() {
+    var text = document.getElementById("infoData");
+    if (text.style.display === "none") {
+        text.style.display = "block";
+    }
+}
+
+
+var navigationTabs = document.getElementById("navLinks");
+
+function hideNavigationMenu(){
+    navigationTabs.style.right = "-200px";
+}
+
+function showNavigationMenu(){
+    navigationTabs.style.right = "0";
+}
+
+
+
+</script>
+
+</body>
+</html>

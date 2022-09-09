@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+     <title>How Green - Living Room</title>
+     <link rel="icon" href="images/tabIcon.png">
+     <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="images/Font/font-awesome-4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    <section class="livingHeader">
+        <nav>
+            <a href="index.html"><img src="images/landingLogo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-window-close" onclick="hideNavigationMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="kitchen.html">KITCHEN</a></li>
+                    <li><a href="bedroom.html">BEDROOM</a></li>
+                    <li><a href="livingRoom.html">LIVING ROOM</a></li>
+                    <li><a href="bathroom.html">BATHROOM</a></li>
+                    <li><a href="restOfTheHouse.html">OTHERS</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showNavigationMenu()"></i>
+        </nav>
+        <h1>Living Room</h1>
+
+    </section>
+
+
+    <section class="fridge">
+        <div class="row">
+            <div class="fridge-col">
+                <h1>Television</h1>
+                <p>Older TVs, e.g. CRT and plasma TVs, were less energy efficient. Modern LCD and LED TVs are considerably more efficient, with LED TVs being most efficient.</p>
+                <input type="text" placeholder="Quantity" id="tvQuantity">
+                <input type="text" placeholder="Runtime" id="tvRuntime">
+                <input type="text"  placeholder="Power" id="tvPower"> 
+            </div>
+            <div class="fridge-col">
+                <img src="images/livingTelevision.jpg">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="oven">
+        <div class="row">
+            <div class="oven-col">
+                <h1><br><br></h1>
+                <img src="images/bedroomLaptop.jpg">
+            </div>
+            <div class="oven-col">
+                <h1><br><br>Laptop</h1>
+                <p>Under typical daily usage, laptops use 55.45 watt hours (0.055 kWh) per day, 1,686.6 watt hours (1.69 kWh) per month and 20,238.8 watt hours (20.24 kWh) per year.</p>
+                <input type="text" placeholder="Quantity" id="laptopQuantity">
+                <input type="text" placeholder="Runtime" id="laptopRuntime">
+                <input type="text"  placeholder="Power" id="laptopPower">
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+
+        <div class="kitchenFact">
+            <h3>Did  you know?</h3>
+            <p>18% of total emissions comes from operating our homes.</p>
+        </div>
+
+    </section>
+
+    <section class="stove">
+        <div class="row">
+            <div class="stove-col">
+                <br><br><br>
+                <h1>Lamp</h1>
+                <p>A LED light bulb uses just seven to ten watts while a fluorescent light bulb consumes 16-20 watts</p>
+                <input type="text" placeholder="Quantity" id="lmpQuantity">
+                <input type="text" placeholder="Runtime" id="lmpRuntime">
+                <input type="text"  placeholder="Power" id="lmpPower">
+            </div>
+            <div class="stove-col">
+                <br>
+                <img src="images/livingLamp.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section class="dishwasher">
+        <div class="row">
+            <div class="dishwasher-col">
+                <br>
+                <img src="images/livingPlaystation.jpg">
+            </div>
+            <div class="dishwasher-col">
+                <h1>Media Player</h1>
+                <p>In standby mode, with no network connection the PS5 consumes 1.5W. When powered off, but still plugged in, the PS5 can consume 1.3W.</p>
+                <input type="text" placeholder="Quantity" id="mediaQuantity">
+                <input type="text" placeholder="Runtime" id="mediaRuntime">
+                <input type="text"  placeholder="Power" id="mediaPower">
+                
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="infoButton">
+            <button class="myButton" id="myButton" type="button" onclick="infoTextToggle()">Save info</button>
+            <p class="infoData" id="infoData" style="display: none">Data has been saved to the database ✔</p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="kitchenPick">
+            <h1>Top Picks</h1>
+            <p1>Recommended living room appliances based on energy efficiency and cost</p1>
+            <div class="row">
+                <div class="kitchenPick-col">
+                    <h3>Philips 48OLED806</h3>
+                    <p>Energy Class: A</p>
+                    <img src="images/bedroomTelevisionPick.png">
+                </div>
+                <div class="kitchenPick-col">
+                    <h3>MacBook Air M1</h3>
+                    <p>The M1 Max draws 39.7W at the wall to deliver a Cinebench R23 score of 12,375.</p>
+                    <img src="images/bedroomLaptopPick.png">
+                </div>
+                <div class="kitchenPick-col">
+                    <h3>PS 5</h3>
+                    <p>A PS5 consumes around 11-17% less energy than the launch model of PS4 did in 2013.</p>
+                    <img src="images/livingPlaystationPick.png">
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <div class="kitchenBtn">
+        <a href="bathroom.html" class="kitchenButton">Next room</a>
+    </div>
+
+
+<script>
+
+const myButton = document.getElementById('myButton');
+myButton.addEventListener("click", function(e){
+
+    var tvQuantity = document.getElementById("tvQuantity").value;
+    if(!tvQuantity){
+        tvQuantity = 0;};
+
+    var tvRuntime = document.getElementById("tvRuntime").value;
+    if(!tvRuntime){
+        tvRuntime = 0;};
+
+    var tvPower = document.getElementById("tvPower").value;
+    if(!tvPower){
+        tvPower = 0;};
+
+
+    var laptopQuantity = document.getElementById("laptopQuantity").value;
+    if(!laptopQuantity){
+        laptopQuantity = 0;};
+
+    var laptopRuntime = document.getElementById("laptopRuntime").value;
+    if(!laptopRuntime){
+        laptopRuntime = 0;};
+
+    var laptopPower = document.getElementById("laptopPower").value;
+    if(!laptopPower){
+        laptopPower = 0;};
+
+
+    var lmpQuantity = document.getElementById("lmpQuantity").value;
+    if(!lmpQuantity){
+        lmpQuantity = 0;};
+
+    var lmpRuntime = document.getElementById("lmpRuntime").value;
+    if(!lmpRuntime){
+        lmpRuntime = 0;};
+
+    var lmpPower = document.getElementById("lmpPower").value;
+    if(!lmpPower){
+        lmpPower = 0;};
+
+
+    var mediaQuantity = document.getElementById("mediaQuantity").value;
+    if(!mediaQuantity){
+        mediaQuantity = 0;};
+
+    var mediaRuntime = document.getElementById("mediaRuntime").value;
+    if(!mediaRuntime){
+        mediaRuntime = 0;};
+
+    var mediaPower = document.getElementById("mediaPower").value;
+    if(!mediaPower){
+        mediaPower = 0;};
+
+
+
+
+
+
+
+(async function (params) {
+
+    const resBedroom = await fetch("http://localhost:5000/api/additem",{
+    method: "POST",
+    body: JSON.stringify(
+[      {
+        _id: "tv",
+        title: "tv",
+        quantity: tvQuantity,
+        runningTime: tvRuntime,
+        power: tvPower,
+    },
+    {
+        _id: "laptop",
+        title: "laptop",
+        quantity: laptopQuantity,
+        runningTime: laptopRuntime,
+        power: laptopPower,
+      },
+      {
+        _id: "lmp",
+        title: "lmp",
+        quantity: lmpQuantity,
+        runningTime: lmpRuntime,
+        power: lmpPower,
+      },
+      {
+        _id: "media",
+        title: "media",
+        quantity: mediaQuantity,
+        runningTime: mediaRuntime,
+        power: mediaPower,
+      },
+      
+    ]),
+    headers: {
+      'Content-Type': 'application/json'
+    },
+})
+
+
+
+const data = await resBedroom.json();
+console.log(data) 
+
+
+
+const resBedroom2 = await fetch("http://localhost:5000/api/getitems");
+     const dataaa = await resBedroom2.json();
+     console.log(dataaa,"data is fetch from database");
+})();
+
+});
+
+
+
+function infoTextToggle() {
+    var text = document.getElementById("infoData");
+    if (text.style.display === "none") {
+        text.style.display = "block";
+    }
+}
+
+
+var navigationTabs = document.getElementById("navLinks");
+
+function hideNavigationMenu(){
+    navigationTabs.style.right = "-200px";
+}
+
+function showNavigationMenu(){
+    navigationTabs.style.right = "0";
+}
+
+
+</script>
+
+</body>
+</html>

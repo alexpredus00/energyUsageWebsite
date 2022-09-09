@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+     <title>How Green</title>
+     <link rel="icon" href="images/tabIcon.png">
+     <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="images/Font/font-awesome-4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/landingLogo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-window-close" onclick="hideNavigationMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="kitchen.html">KITCHEN</a></li>
+                    <li><a href="bedroom.html">BEDROOM</a></li>
+                    <li><a href="livingRoom.html">LIVING ROOM</a></li>
+                    <li><a href="bathroom.html">BATHROOM</a></li>
+                    <li><a href="restOfTheHouse.html">OTHERS</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showNavigationMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>How Green</h1>
+            <p>Discover how much electricity your house uses every day <br>Make the world a better place<br>Improve. Innovate.</p>
+            <a href="kitchen.html" class="hero-btn">Find out today</a>
+        </div>
+    </section>
+
+<section class="green">
+    <h1>Uses of green energy in today's world</h1>
+    <p>Green energy has many uses that can help us shape a better future, here are a couple of them</p>
+    <div class = "row">
+        <div class = "green-col">
+            <h3>Heating and Cooling in Buildings</h3>
+            <p>Green energy solutions are being used for buildings ranging from large office blocks to people’s homes. These include solar water heaters, biomass fuelled boilers and direct heat from geothermal, as well as cooling systems powered by renewable sources.</p>
+        </div>
+        <div class = "green-col">
+            <h3>Industrial Processes</h3>
+            <p>Renewable heat for industrial processes can be run using biomass or renewable electricity. Hydrogen is now a large provider of renewable energy for the cement, iron, steel and chemical industries.</p>
+        </div>
+        <div class = "green-col">
+            <h3>Transport</h3>
+            <p>Sustainable biofuels and renewable electricity are growing in use for transportation across multiple industry sectors. Automotive is an obvious example as electrification advances to replace fossil fuels, but aerospace and construction are other areas that are actively investigating electrification.</p>
+        </div>
+    </div>
+</section>
+
+<section class = "price">
+    <h1>The current price of energy as of July 2022</h1>
+    <p>The price of energy has been steadily raising in the past year</p>
+
+    <div class = "row">
+        <div class="price-col">
+            <img src="images/enel.jpg">
+            <div class="layer">
+                <h3>ENEL <BR> 1.473 RON/KWh</h3>
+            </div>
+        </div>
+        <div class="price-col">
+            <img src="images/engie.jpg">
+            <div class="layer">
+                <h3>Engie <br> 1.570 RON/KWh</h3>
+            </div>
+            <p>*Taxes not included</p>
+        </div>
+        <div class="price-col">
+            <img src="images/hidroelectrica.jpg">
+            <div class="layer">
+                <h3>Hidroelectrica <br> 0.252 RON/KWh</h3>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+
+<section class = "history">
+    <h1>Evolution of energy prices in the European Union</h1>
+    <p>source: eurostat</p>
+
+    <div class = "row">
+        <div class="history-col">
+            <img src="images/prices.png" width="300" height="400">
+        </div>
+
+        <div class="history-col">
+            <img src="images/pricesEU.jpg" width="300" height="400">
+        </div>
+    </div>
+</section>
+
+<section class="quotes">
+    <h1>Famous Quotes</h1>
+    <p>People's support of renewable energy is at an all time high</p>
+
+    <div class="row">
+        <div class="quotes-col">
+            <img src="images/obama.png">
+            <div>
+                <p>For decades, we've been told that it doesn't make economic sense to switch to renewable energy. Today, that's no longer true.<br> <br></p>
+                <h3>Barack Obama</h3>
+            </div>
+        </div>
+            <div class="quotes-col">
+                <img src="images/may.png">
+                <div>
+                    <p>Once you got a solar panel on a roof, energy is free. Once we convert our entire electricity grid to green and renewable energy, cost of living goes down.</p>
+                    <h3>Elizabeth May</h3>
+                </div>
+            </div>
+    </div>
+
+    <div class="row">
+        <div class="quotes-col">
+            <img src="images/arnold.png">
+            <div>
+                <p>The future is green energy, sustainability, renewable energy. <br><br><br></p>
+                <h3>Arnold Schwarzenegger</h3>
+            </div>
+        </div>
+            <div class="quotes-col">
+                <img src="images/frances.jpg">
+                <div>
+                    <p>Wind and other clean, renewable energy will help end our reliance on fossil fuels and combat the severe threat that climate change poses to humans and wildlife alike.</p>
+                    <h3>Frances Beinecke</h3>
+                </div>
+            </div>
+    </div>
+    
+</section>
+
+<section class = "end">
+    <h1>A transition to clean energy is about making an investment into our future.</h1>
+    <a href="kitchen.html" class="hero-btn">GET STARTED</a>
+</section>
+
+
+
+<script>
+
+
+    var navigationTabs = document.getElementById("navLinks");
+
+    function hideNavigationMenu(){
+        navigationTabs.style.right = "-200px";
+    }
+
+    function showNavigationMenu(){
+        navigationTabs.style.right = "0";
+    }
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+     <title>How Green - Bedroom</title>
+     <link rel="icon" href="images/tabIcon.png">
+     <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="images/Font/font-awesome-4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    <section class="headerBedroom">
+        <nav>
+            <a href="index.html"><img src="images/landingLogo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-window-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="kitchen.html">KITCHEN</a></li>
+                    <li><a href="bedroom.html">BEDROOM</a></li>
+                    <li><a href="livingRoom.html">LIVING ROOM</a></li>
+                    <li><a href="bathroom.html">BATHROOM</a></li>
+                    <li><a href="restOfTheHouse.html">OTHERS</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showNavigationMenu()"></i>
+        </nav>
+        <h1>Bedroom</h1>
+
+    </section>
+
+
+    <section class="fridge">
+        <div class="row">
+            <div class="fridge-col">
+                <h1>Television</h1>
+                <p>On average, TVs consume 106.9 kWh of electricity per year, costing $16.04 annually to run in the US.</p>
+                <input type="text" placeholder="Quantity" id="televisionQuantity">
+                <input type="text" placeholder="Runtime" id="televisionRuntime">
+                <input type="text"  placeholder="Power" id="televisionPower">
+            </div>
+            <div class="fridge-col">
+                <img src="images/television.jpg">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="oven">
+        <div class="row">
+            <div class="oven-col">
+                <h1><br><br></h1>
+                <img src="images/airConditioner.jpg">
+            </div>
+            <div class="oven-col">
+                <h1><br>Air Conditioner</h1>
+                <p>There are various reasons why some air conditioners consume more power than others. An older model uses more electricity than those utilizing modern technology. Also, if you haven’t serviced your unit for a long time, it’s likely to use up more energy to maintain the required temperature in your house.</p>
+                <input type="text" placeholder="Quantity" id="acQuantity">
+                <input type="text" placeholder="Runtime" id="acRuntime">
+                <input type="text"  placeholder="Power" id="acPower">
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+
+        <div class="kitchenFact">
+            <h3>Did  you know?</h3>
+            <p>We spend 10% of our electricity bills on lighting.</p>
+        </div>
+
+    </section>
+
+    <section class="stove">
+        <div class="row">
+            <div class="stove-col">
+                <h1>Lamp</h1>
+                <p>Modern lamps and lighting began with the invention of the incandescent electric lamp about 1870.</p>
+                <input type="text" placeholder="Quantity" id="lampQuantity">
+                <input type="text" placeholder="Runtime" id="lampRuntime">
+                <input type="text"  placeholder="Power" id="lampPower">
+            </div>
+            <div class="stove-col">
+                <br>
+                <img src="images/bedroomLamp.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section class="dishwasher">
+        <div class="row">
+            <div class="dishwasher-col">
+                <br>
+                <img src="images/bedroomComputerPick.jpg">
+            </div>
+            <div class="dishwasher-col">
+                <h1>Personal Computer</h1>
+                <p>A desktop uses an average of 200 W/hour when it is being used (loudspeakers and printer included). A computer that is on for eight hours a day uses almost 600 kWh and emits 175 kg of CO2 per year.</p>
+                <input type="text" placeholder="Quantity" id="pcQuantity">
+                <input type="text" placeholder="Runtime" id="pcRuntime">
+                <input type="text"  placeholder="Power" id="pcPower">
+                
+            </div>
+
+        </div>
+    </section>
+
+    
+    <section>
+        <div class="infoButton">
+            <button class="myButton" id="myButton" type="button" onclick="infoTextToggle()">Save info</button>
+            <p class="infoData" id="infoData" style="display: none">Data has been saved to the database ✔</p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="kitchenPick">
+            <h1>Top Picks</h1>
+            <p1>Recommended bedroom appliances based on energy efficiency and cost</p1>
+            <div class="row">
+                <div class="kitchenPick-col">
+                    <h3>Philips 48OLED806</h3>
+                    <p>Energy Class: A</p>
+                    <img src="images/bedroomTelevisionPick.png">
+                </div>
+                <div class="kitchenPick-col">
+                    <h3>Daikin Sensira FTXC35C-RXC35C</h3>
+                    <p>Energy Class: A++</p>
+                    <img src="images/bedroomAirConditionerPick.png">
+                </div>
+                <div class="kitchenPick-col">
+                    <h3>KaiserKraft Maul</h3>
+                    <p>Energy Consumption: 10 kWh/1000h</p>
+                    <img src="images/bedroomLampPick.png">
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <div class="kitchenBtn">
+        <a href="livingRoom.html" class="kitchenButton">Next room</a>
+    </div>
+
+
+<script>
+
+const myButton = document.getElementById('myButton');
+myButton.addEventListener("click", function(e){
+
+    var televisionQuantity = document.getElementById("televisionQuantity").value;
+    if(!televisionQuantity){
+        televisionQuantity = 0;};
+
+    var televisionRuntime = document.getElementById("televisionRuntime").value;
+    if(!televisionRuntime){
+        televisionRuntime = 0;};
+
+    var televisionPower = document.getElementById("televisionPower").value;
+    if(!televisionPower){
+        televisionPower = 0;};
+
+
+    var acQuantity = document.getElementById("acQuantity").value;
+    if(!acQuantity){
+        acQuantity = 0;};
+
+    var acRuntime = document.getElementById("acRuntime").value;
+    if(!acRuntime){
+        acRuntime = 0;};
+
+    var acPower = document.getElementById("acPower").value;
+    if(!acPower){
+        acPower = 0;};
+
+
+    var lampQuantity = document.getElementById("lampQuantity").value;
+    if(!lampQuantity){
+        lampQuantity = 0;};
+
+    var lampRuntime = document.getElementById("lampRuntime").value;
+    if(!lampRuntime){
+        lampRuntime = 0;};
+
+    var lampPower = document.getElementById("lampPower").value;
+    if(!lampPower){
+        lampPower = 0;};
+
+
+    var pcQuantity = document.getElementById("pcQuantity").value;
+    if(!pcQuantity){
+        pcQuantity = 0;};
+
+    var pcRuntime = document.getElementById("pcRuntime").value;
+    if(!pcRuntime){
+        pcRuntime = 0;};
+
+    var pcPower = document.getElementById("pcPower").value;
+    if(!pcPower){
+        pcPower = 0;};
+
+
+
+
+
+
+
+(async function (params) {
+
+    const resBedroom = await fetch("http://localhost:5000/api/additem",{
+    method: "POST",
+    body: JSON.stringify(
+[      {
+        _id: "television",
+        title: "television",
+        quantity: televisionQuantity,
+        runningTime: televisionRuntime,
+        power: televisionPower,
+    },
+    {
+        _id: "ac",
+        title: "ac",
+        quantity: acQuantity,
+        runningTime: acRuntime,
+        power: acPower,
+      },
+      {
+        _id: "lamp",
+        title: "lamp",
+        quantity: lampQuantity,
+        runningTime: lampRuntime,
+        power: lampPower,
+      },
+      {
+        _id: "pc",
+        title: "pc",
+        quantity: pcQuantity,
+        runningTime: pcRuntime,
+        power: pcPower,
+      },
+      
+    ]),
+    headers: {
+      'Content-Type': 'application/json'
+    },
+})
+
+
+
+const data = await resBedroom.json();
+console.log(data) 
+
+
+
+const resBedroom2 = await fetch("http://localhost:5000/api/getitems");
+     const dataaa = await resBedroom2.json();
+     console.log(dataaa,"data is fetch from database");
+})();
+
+});
+
+
+
+function infoTextToggle() {
+    var text = document.getElementById("infoData");
+    if (text.style.display === "none") {
+        text.style.display = "block";
+    }
+}
+
+var navigationTabs = document.getElementById("navLinks");
+
+function hideNavigationMenu(){
+    navigationTabs.style.right = "-200px";
+}
+
+function showNavigationMenu(){
+    navigationTabs.style.right = "0";
+}
+
+
+
+</script>
+
+</body>
+</html>
