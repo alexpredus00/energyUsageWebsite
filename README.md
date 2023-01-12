@@ -8,3 +8,7 @@ The website is structured on multiple pages, each representing a room found in a
 At the end, he will receive information about the total energy consumptions, different charts comparing to other households and other such things, tips on where he can improve efficiency etc
 
 * Result page will not work without the backend running (backend/app.js) because the information cannot be saved to the database *
+
+
+![energysite1](https://user-images.githubusercontent.com/60524964/212150788-72219b7c-2fc2-410f-9ef5-08e34406f499.png)
+![energysite2](https://user-images.githubusercontent.com/60524964/212150793-7e59b5e0-0bb7-4873-9dd2-542689ce438b.png)
