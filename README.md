@@ -13,3 +13,5 @@ At the end, he will receive information about the total energy consumptions, dif
 ![energysite1](https://user-images.githubusercontent.com/60524964/212150788-72219b7c-2fc2-410f-9ef5-08e34406f499.png)
 ![energysite2](https://user-images.githubusercontent.com/60524964/212150793-7e59b5e0-0bb7-4873-9dd2-542689ce438b.png)
 ![2023-01-12 20_38_36-VirtualBoxVM](https://user-images.githubusercontent.com/60524964/212151471-efdced18-694d-4529-ac76-98c5535a20b5.png)
+![energysite4](https://user-images.githubusercontent.com/60524964/212152701-c25bbf48-f95c-4870-9953-07e8831c2313.png)
+![energysite5](https://user-images.githubusercontent.com/60524964/212152710-e3a133dc-9b82-4e68-a47a-db39d99a92b7.png)
